@@ -1,0 +1,23 @@
+secret:
+    enabled: ENC[AES256_GCM,data:gpjAbg==,iv:xKf9opBqRO5ARj6XmVJGKvOFwckwLfYel+Asm+NcelI=,tag:v1gXLqPrFNd4c1qwLr5SEg==,type:bool]
+    additionalLabels: null
+    annotations: null
+    files:
+        - nameSuffix: ENC[AES256_GCM,data:8yMKCV/w,iv:cMxtVpGtzn32QLThEXVoWX/CneVEbvau5INM8idswLk=,tag:OHwARTWl/cmYsJG+tsU6YA==,type:str]
+          data:
+            env: ENC[AES256_GCM,data:yoKtna2z6FAyWZ/S0x7aLzNCRJRdOsah22ofnx5d9ZNZrXQtY7TQWjFp3eAJnILR0vESHoT0t+tZP2hzNMOTH9Gs0EalVGsZCXreJ3aBQa9q8zYyKc8SR3CbbOvD2OdAd45YWbzktIuMjCbqkjDnMesbq7Gw5ge7D+Pw+Oq9TNhoNG36a6oRiqKR17WprfOu5CYE3nDtVW3ZEObAnOJQ4gapIM4rM9EAVCFDkHK3lz7DDAqj9IP/y3wmcUkjtuP0O6jAMr9N3+hqGN78EIHtJzTIJBh4kbuZHIRJJtMalJhPc05UoKzfVSAk0Q1H30/yMAvlsHG0hfIo3JV/JMi9LB7Y6SvJtwpZji1kzsPDyPZpjcu8clLz1eO+ciO9RSyZzxoL5JoS5zdPT5ze8hwxqSWF8vjxKLOCnEdBVv19Wu2wnH7EZiDH984++1mcOFeUQt8KZthYG4n8Vu3lfTxNjY93tPeNSwTf9Ciksi8NdRBmwJcUaNzC+W8NVxrQo0SX4fnSqPEaq7LPjOzRdjq7jDkiRx/19vmu4+6iwSAcfR40tOEuktZQpaI4jTwkx4xwqC7ZoWBRVJdOaMm5/8k00Zw+tUGhWyA9FNS5F2aM25vUHT8kVz7dMejpEMPqEXf8K17P3ckQqW4QC+wvm9MbIuUfPCQ8SdHAw+zYLLDk/0W6CDO9DzKwjjcUqrcQxfttuoSH9JS9/f26+qzprtVmeRoaTIALHh/glcauF7k4FDrbnK0rtacrLOFvKD0tgOpc4raoocYatBmlmYzWjnbdehHLeOV61sZpXRglbsxe77iBZ3n45Eqrb0cj+FXQzQcecnvOFmsUasaZexB4J+ZNiMTkZu8Xhx9mUlzAkbEfa+fshQEFkNJsDTPq2aPK5KxxwcDX6+QVglfIwRlv/mPEDLbDJetDSUGJGx1lxjvTSvN5iew1i8SrQPWMUGSVz9dLfbtUt7C5bbDtO3Zh7M5W4vPWMTLEv1FX7jwQCDJznetvQBaSoJP5w80yLFWQMwOwEDzfX99ppgZzSZHxWoC9ek66qogerKTXMn0VNPN7H2gTA0iVnBEEcwpxXPKerSdwqu2U05+gicv4CTfl2nbGWgtkAo9qCH208MaCzCOq+bnphuCH2PzQSh5GRrpL/SXr0F0F1z4PNMjzQE3JJ9dJiH3Gm/Z1YMgKB6DLtZvn776wAMKTqM5at1QrZwd8z0DzQICArDTg6lzXhyPyCGXn6kijaSuYco6vELdgC8ndZbbVtbSHxWFlSY1V2X/mAdZ4dD0dLpg2LfeI+3Zn/KJiDi7c49BK,iv:XJ067D4ezzr7KdvvubEIyfBK9sDSvmXf513GCk5evZk=,tag:HOhozQfj/COGL7aGA6lV4g==,type:str]
+sops:
+    kms:
+        - arn: arn:aws:kms:af-south-1:617217039186:alias/gti-paydart-af1-uat-app-secrets
+          created_at: "2026-03-02T20:05:10Z"
+          enc: AQICAHh9ogVWIDO0uRL7tEmNc+B29gwmecJObjj7g9YLk6lplwEhYGQE7fy9ypbY/0jYgeupAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMagnmyU+NbNfM0xKrAgEQgDv7n+anVmC5b9bl7Fhp44VWHcCZgs/YmKPYVCpYfbIJilIv8UTz7KxlUUMcHgYhU0QQICHZ4MwTWZWekA==
+          aws_profile: ""
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2026-03-02T20:05:11Z"
+    mac: ENC[AES256_GCM,data:pwxD9UaBxbwmdc6mP0w/lpc3dJZIEECxpfBrdJlq9ZowS8Y3srw0Rf1yFijt5m7emNqtXRWkQKTVoD6SobPitMKoslDNWa92iWUB7GWOyiNk4eo3NCiAeXCSkSQctJGwoC9Uig+Wp+198316f0Sn6E7rV1D1vMZYjXnFjxADwVg=,iv:DyO664EcwIZOL+hLWuX8hNQy8VBKdjWA3OpCI3v2kUk=,tag:yXM5x1g2RaCUJdPgzNTw2w==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.9.3

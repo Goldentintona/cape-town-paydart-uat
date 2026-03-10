@@ -1,0 +1,237 @@
+applications:
+  app:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - app/uat/values.yaml
+          - secrets://app/uat/values-enc.yaml
+        releaseName: app
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: backend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  fraud:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - fraud/uat/values.yaml
+          - secrets://fraud/uat/values-enc.yaml
+        releaseName: fraud
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: backend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  kycadmin:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - kycadmin/uat/values.yaml
+          - secrets://kycadmin/uat/values-enc.yaml
+        releaseName: kycadmin
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: backend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  nodeserver:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - nodeserver/uat/values.yaml
+          - secrets://nodeserver/uat/values-enc.yaml
+        releaseName: nodeserver
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: backend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  payout:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - payout/uat/values.yaml
+          - secrets://payout/uat/values-enc.yaml
+        releaseName: payout
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: backend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  support:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - support/uat/values.yaml
+          - secrets://support/uat/values-enc.yaml
+        releaseName: support
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: backend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  uptime:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - uptime/uat/values.yaml
+        releaseName: uptime
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: backend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  checkout:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - checkout/uat/values.yaml
+          - secrets://checkout/uat/values-enc.yaml
+        releaseName: checkout
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: frontend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  console:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - console/uat/values.yaml
+          - secrets://console/uat/values-enc.yaml
+        releaseName: console
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: frontend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  face-detect:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - face-detect/uat/values.yaml
+        releaseName: face-detect
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: frontend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  kyc:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - kyc/uat/values.yaml
+          - secrets://kyc/uat/values-enc.yaml
+        releaseName: kyc
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: frontend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  kyc-node:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - kyc-node/uat/values.yaml
+          - secrets://kyc-node/uat/values-enc.yaml
+        releaseName: kyc-node
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: frontend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  paydart-api:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - paydart-api/uat/values.yaml
+          - secrets://paydart-api/uat/values-enc.yaml
+        releaseName: paydart-api
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: frontend
+    syncPolicy: {}
+    revisionHistoryLimit: 5
+  dcc:
+    namespace: argocd
+    project: default
+    source:
+      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      targetRevision: main
+      path: kubernetes/charts/generic-chart
+      helm:
+        valueFiles:
+          - dcc/uat/values.yaml
+          - secrets://dcc/uat/values-enc.yaml
+        releaseName: dcc
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: backend
+    syncPolicy: {}
+    revisionHistoryLimit: 5

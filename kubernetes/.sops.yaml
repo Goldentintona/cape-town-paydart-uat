@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: 'charts\/.*\/uat\/(.*).yaml'
+    kms: "arn:aws:kms:af-south-1:617217039186:alias/gti-paydart-af1-uat-app-secrets"

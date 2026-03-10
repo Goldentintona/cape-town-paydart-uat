@@ -1,0 +1,30 @@
+applicationName: "autocapture-live"
+tier: backend   
+
+labels:
+  group: paydart-generic-helm
+
+cronjob:
+  enabled: true
+  schedule: "* 9 * * *"
+  imagePullSecrets:
+    - name: regcred-operations
+  image:
+    repository: "kmarji/mini-server"
+    pullPolicy: IfNotPresent
+    tag: "ff66184d"
+  restartPolicy: "OnFailure"
+  command: ["curl"]
+  baseArgs: ["-s", "https://merchant.paydart.co/console/cron-live"]
+  envFrom: []
+  # - type: configmap
+  #   name: my-configmap
+  # - type: secret
+  #   name: my-secret
+  resources:
+    requests:
+      memory: 400Mi
+      cpu: 200m
+    limits:
+      memory: 400Mi
+      cpu: 200m

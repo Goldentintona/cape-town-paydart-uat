@@ -1,0 +1,29 @@
+{{- if .Values.application -}}
+{{- if .Values.application.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ .Values.applicationName }}
+  namespace: {{ .Values.application.argocd_namespace }}
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: {{ .Values.application.deployment_namespace }}
+  project: default
+  source:
+    path: {{ .Values.application.repo_path }}/{{ .Values.applicationName }}
+    repoURL: {{ .Values.application.repoURL }}
+    targetRevision: {{ .Values.application.branch }}
+    helm:
+      releaseName: {{ .Values.applicationName }}
+      valueFiles:
+    {{- range .Values.application.helm.valueFiles }}
+        - {{ . }}
+    {{- end }}
+{{- if .Values.application.syncPolicy }}
+  syncPolicy:
+{{ toYaml .Values.application.syncPolicy | indent 4 }}
+{{- end }}
+  revisionHistoryLimit: 5
+{{- end -}}
+{{- end -}}

@@ -1,0 +1,23 @@
+secret:
+    enabled: ENC[AES256_GCM,data:8aHoXA==,iv:ErbTBlw7nkpFrgW8xGzrE0QDgsroLC+VT7BHN1tuQ9o=,tag:7uSg65xhaie8oJwZ54q/hQ==,type:bool]
+    additionalLabels: null
+    annotations: null
+    files:
+        - nameSuffix: ENC[AES256_GCM,data:gMZsaepc,iv:Vc1Jnix7eLdEHHkXa8Uzze6bmEVoqlYIoEyrHGcV/A4=,tag:TKIhW5TybPKfxDRR8qgy+g==,type:str]
+          data:
+            config: ENC[AES256_GCM,data:UyKLmsAFAM6tgujRjk/mCBxzr8FDUEKfunpvc8I7eQ28QmsmbwXArxCjL0O01RzQH5sefVaYSieGeekqLms4aEQ5XNC/lAvLxT+uqwKsruPTwr9cgTIYsXb9rXFPtc/h9RayGW9wrbr9lm9eE2+xoVkpvuKDDGJyvGJh6ar3yzp8Rje7Mg1N+njp3lf00EEz7DokbLW95OyAJ8gQ9JGg33/PJrxpZqPkhyZGpty30KBCZma/Q+CHpPkMJMWdTs74ls/4CE9Yn8U5sQ0hR2gossz0+nIlkJKhsjqOADLRBmqOItjglP4iCbWo/LYN2cq7oFfVJM5U2GAbYHEKzuyxRhW56WmfsB9elYR9+a745sC7je1NcGk6xkWuGrcKMqGX4ndhiChzPuafGs9ydPNBh+IbOTtBYkhspQeYhEUT0DjjytZOZD4SxsN/ipdxqX4lk96eHsJWAMceyqpZN5mYGgEPQU1VkcPKh4Xgx9dLU66+QBAhJDws0PobUHAdNWkIyf1z3XMpIGeOua192hGAnow0vL/J6WgAelnkGGKEApaEKpvPWhsXbBK87eUpSSKvSz90yZQ5ayaAvHKVhdW1fK3TA7w0xsJrn8x1mlKS327Z6m6NjrnEvMqKdAAVIq3ByMzNTGf8yhiMf/bTJ2x7IaoF/MsG7LZPVoOx45K/WixysxuU+YyOKwgqTwTr2U4FjUrTdQYj1VtOip4gtFC5N88Og38Wq3QgO7eZ5qkPaLKh04TpYOw0thoj9D3ASaSnVLNTBmf/oCrFmrKzF+Jyrza966YWWxTwVqlnooiz7quLBJQFapGdVh1XiM4FItT0n8MYowOnXSVftlpEOzm37063GqiEqS3S43S0aGcxdKmd9eZyESwdppRzvXNqPxHC/GqkhXC7TP8pjJtABLECc+PkkOCPHZvJwxQ3ldUAJoTA/2i6qrr0FEOWh0oBdCRNh4VwHU8+8F1w3n3BBGpB5JzgWpXp8yClBfchdDJNZFOSXcsQDf9198KxVX+DTQPEg6XvGXAAyRzXiY3iNbD1Uj8dSoG45A==,iv:ZDMxloA3IFOsfmxU7R/CTiDtLX7zIac2xA//4V4ylwg=,tag:RsykUu8URw0RW0IryrXNZw==,type:str]
+sops:
+    kms:
+        - arn: arn:aws:kms:af-south-1:617217039186:alias/gti-paydart-af1-uat-app-secrets
+          created_at: "2026-03-02T20:03:57Z"
+          enc: AQICAHh9ogVWIDO0uRL7tEmNc+B29gwmecJObjj7g9YLk6lplwHCF33yP6qy8sqaDOH0PjRkAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM5kpD13iV8IMHOKQyAgEQgDsfNM/e7x+okk4ZyzA2JQeZLrIQvk7Se1XnWb0XwYBKbagDid84IV55sPw/jBr5SMNekzpjSwivT9p4RQ==
+          aws_profile: ""
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2026-03-02T20:03:57Z"
+    mac: ENC[AES256_GCM,data:tOLLM/ALDYvSHf8rW2+1KVes1atyWvBV5+DiXi6LcAzCbmVTEXu7j3+bFRLtQ3NAIwaqVns4fTWxFN+wvHAzQaiqKVrPy8x46xTjZmun7y1ycbmsy7aks4YTBaGrKsltE2pvWoD9BCva/U/8aPNgWIsVU8Ai1LFCY83fXcW4d88=,iv:/rJAa0/xr6iT7/Guw6eM7KL9D38OBS8WfLPMtuvl3I4=,tag:2luhZZe7zhPVYPT01OUsVw==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.9.3

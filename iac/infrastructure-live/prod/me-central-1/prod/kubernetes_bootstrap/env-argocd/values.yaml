@@ -1,0 +1,72 @@
+server:
+  config:
+    helm.valuesFileSchemes: >-
+      secrets
+  ingress:
+    enabled: false
+    ingressClassName: nginx
+    https: false
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    hosts:
+      - proargo.gtiswitch.com
+configs:
+  repositories:
+    private-helm-repo:
+      url: https://github.com/abpaydart/infra-gti.git
+      name: default
+      type: git
+      username: not-used
+  cm:
+    create: true
+    helm.valuesFileSchemes: >-
+      secrets
+repoServer:
+  env:
+    - name: HELM_PLUGINS
+      value: /custom-tools/helm-plugins/
+    - name: HELM_SECRETS_SOPS_PATH
+      value: /custom-tools/sops
+    - name: HELM_SECRETS_VALS_PATH
+      value: /custom-tools/vals
+    - name: HELM_SECRETS_KUBECTL_PATH
+      value: /custom-tools/kubectl
+    - name: HELM_SECRETS_CURL_PATH
+      value: /custom-tools/curl
+    - name: HELM_SECRETS_VALUES_ALLOW_SYMLINKS
+      value: "false"
+    - name: HELM_SECRETS_VALUES_ALLOW_ABSOLUTE_PATH
+      value: "false"
+    - name: HELM_SECRETS_VALUES_ALLOW_PATH_TRAVERSAL
+      value: "false"
+  initContainers:
+    - name: download-tools
+      image: alpine:latest
+      command: [sh, -ec]
+      env:
+        - name: HELM_SECRETS_VERSION
+          value: "4.5.0"
+        - name: KUBECTL_VERSION
+          value: "1.23.6"
+        - name: VALS_VERSION
+          value: "0.18.0"
+        - name: SOPS_VERSION
+          value: "3.7.3"
+      args:
+        - |
+          mkdir -p /custom-tools/helm-plugins
+          wget -qO- https://github.com/jkroepke/helm-secrets/releases/download/v4.5.0/helm-secrets.tar.gz | tar -C /custom-tools/helm-plugins -xzf-;
+          wget -qO /custom-tools/sops https://github.com/mozilla/sops/releases/download/v3.7.3/sops-v3.7.3.linux
+          wget -qO /custom-tools/kubectl https://dl.k8s.io/release/v1.23.6/bin/linux/amd64/kubectl
+          chmod +x /custom-tools/*
+      volumeMounts:
+        - mountPath: /custom-tools
+          name: custom-tools
+  volumes:
+    - name: custom-tools
+      emptyDir: {}
+  volumeMounts:
+    - mountPath: /custom-tools
+      name: custom-tools
