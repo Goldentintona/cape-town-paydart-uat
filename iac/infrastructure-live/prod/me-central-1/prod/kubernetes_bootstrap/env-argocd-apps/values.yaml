@@ -3,7 +3,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -20,7 +20,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -37,7 +37,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -54,7 +54,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -71,7 +71,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -88,7 +88,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -105,7 +105,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -121,7 +121,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -138,7 +138,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -155,7 +155,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -171,7 +171,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -188,7 +188,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -205,7 +205,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
@@ -222,7 +222,7 @@ applications:
     namespace: argocd
     project: default
     source:
-      repoURL: https://github.com/Goldentintona/cape-town-paydart.git
+      repoURL: https://github.com/Goldentintona/cape-town-paydart-uat.git
       targetRevision: main
       path: kubernetes/charts/generic-chart
       helm:
