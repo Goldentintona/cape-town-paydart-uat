@@ -200,11 +200,11 @@ deployment:
   # Resources to be defined for pod
   resources:
     limits:
-      memory: 5Gi
-      cpu: 2500m
+      memory: 1Gi
+      cpu: 900m
     requests:
-      memory: 4Gi
-      cpu: 2000m
+      memory: 512Mi
+      cpu: 500m
 
   # Add additional containers besides init and app containers
   additionalContainers:
