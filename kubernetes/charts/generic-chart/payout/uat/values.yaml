@@ -69,7 +69,7 @@ deployment:
   # key: value
 
   # Replicas to be created
-  replicas: 2
+  replicas: 1
 
   # Revision History Limit for Replica Sets
   revisionHistoryLimit: 4
