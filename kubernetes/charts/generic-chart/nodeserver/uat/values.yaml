@@ -112,11 +112,11 @@ deployment:
     - name: public
       nfs:
         path: /node-server/public
-        server: fs-0f4f8f38375f980d5.efs.af-south-1.amazonaws.com
+        server: fs-0b636174a8162f927.efs.af-south-1.amazonaws.com
     - name: nfs-root
       nfs:
         path: /
-        server: fs-0f4f8f38375f980d5.efs.af-south-1.amazonaws.com
+        server: fs-0b636174a8162f927.efs.af-south-1.amazonaws.com
     - secret:
         defaultMode: 420
         secretName: nodeserver-config
