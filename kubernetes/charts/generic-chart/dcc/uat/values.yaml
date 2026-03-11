@@ -492,8 +492,8 @@ application:
   branch: master
   helm:
     valueFiles:
-      - uat/values.yaml
-      - secrets://uat/values-enc.yaml
+      - production/values.yaml
+      - secrets://production/values-enc.yaml
   syncPolicy: {}
   #    automated:
   #      prune: false

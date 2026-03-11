@@ -96,7 +96,7 @@ deployment:
     - name: DD_VERSION
       value: "123456"
     - name: DD_ENV
-      value: uat
+      value: prod
     - name: DD_PROFILING_ENABLED
       value: "true"
     - name: DD_SERVICE
@@ -534,8 +534,8 @@ application:
   branch: master
   helm:
     valueFiles:
-      - uat/values.yaml
-      - secrets://uat/values-enc.yaml
+      - production/values.yaml
+      - secrets://production/values-enc.yaml
   syncPolicy: {}
   #    automated:
   #      prune: false
