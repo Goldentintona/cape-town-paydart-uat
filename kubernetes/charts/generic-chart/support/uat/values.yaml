@@ -51,7 +51,7 @@ deployment:
   # key: value
 
   # Replicas to be created
-  replicas: 3
+  replicas: 1
 
   # Revision History Limit for Replica Sets
   revisionHistoryLimit: 4
@@ -162,19 +162,25 @@ deployment:
         containerPort: 80
         protocol: TCP
 
-  # livenessProbe:
-  #   httpGet:
-  #     scheme: HTTP
-  #     path: /support/health
-  #     port: web
-  #   initialDelaySeconds: 60
-  #   periodSeconds: 10
-  # readinessProbe:
-  #   httpGet:
-  #     scheme: HTTP
-  #     path: /support/health
-  #     port: web
-  #   initialDelaySeconds: 30
+  # Readiness and Liveness probes
+  readinessProbe:
+    failureThreshold: 3
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 1
+    initialDelaySeconds: 10
+    httpGet:
+      path: /health
+      port: web
+  livenessProbe:
+    failureThreshold: 3
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 1
+    initialDelaySeconds: 30
+    httpGet:
+      path: /health
+      port: web
 
   # Resources to be defined for pod
   resources:
