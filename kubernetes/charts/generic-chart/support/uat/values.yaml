@@ -162,25 +162,25 @@ deployment:
         containerPort: 80
         protocol: TCP
 
-  # Readiness and Liveness probes
-  readinessProbe:
-    failureThreshold: 3
-    periodSeconds: 10
-    successThreshold: 1
-    timeoutSeconds: 1
-    initialDelaySeconds: 10
-    httpGet:
-      path: /health
-      port: web
-  livenessProbe:
-    failureThreshold: 3
-    periodSeconds: 10
-    successThreshold: 1
-    timeoutSeconds: 1
-    initialDelaySeconds: 30
-    httpGet:
-      path: /health
-      port: web
+  # # Readiness and Liveness probes
+  # readinessProbe:
+  #   failureThreshold: 3
+  #   periodSeconds: 10
+  #   successThreshold: 1
+  #   timeoutSeconds: 1
+  #   initialDelaySeconds: 10
+  #   httpGet:
+  #     path: /health
+  #     port: web
+  # livenessProbe:
+  #   failureThreshold: 3
+  #   periodSeconds: 10
+  #   successThreshold: 1
+  #   timeoutSeconds: 1
+  #   initialDelaySeconds: 30
+  #   httpGet:
+  #     path: /health
+  #     port: web
 
   # Resources to be defined for pod
   resources:
