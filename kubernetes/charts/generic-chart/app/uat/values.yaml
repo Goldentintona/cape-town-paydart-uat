@@ -152,7 +152,7 @@ deployment:
   # Image of the app container
   image:
     repository: pdsrvcprovider/app
-    tag: "build-377"
+    tag: "build-388"
     pullPolicy: IfNotPresent
     appprefix:
       enabled: true
