@@ -181,7 +181,7 @@ deployment:
   # Image of the app container
   image:
     repository: pdsrvcprovider/checkout
-    tag: "buildn-600"
+    tag: "buildn-601"
     pullPolicy: IfNotPresent
     appprefix:
       enabled: true
