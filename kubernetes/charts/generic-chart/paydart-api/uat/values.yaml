@@ -125,7 +125,7 @@ deployment:
   # Image of the app container
   image:
     repository: pdsrvcprovider/paydart-api
-    tag: "build-27"
+    tag: "build-32"
     pullPolicy: IfNotPresent
     appprefix:
       enabled: true

@@ -125,7 +125,7 @@ deployment:
   # Image of the app container
   image:
     repository: pdsrvcprovider/console
-    tag: "build-372"
+    tag: "build-377"
     pullPolicy: IfNotPresent
     appprefix:
       enabled: true
