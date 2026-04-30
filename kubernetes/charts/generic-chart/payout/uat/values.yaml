@@ -145,7 +145,7 @@ deployment:
   # Image of the app container
   image:
     repository: pdsrvcprovider/payout
-    tag: "build-170"
+    tag: "build-171"
     pullPolicy: IfNotPresent
     appprefix:
       enabled: true
